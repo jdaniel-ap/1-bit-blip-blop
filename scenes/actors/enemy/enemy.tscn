@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://de1exivvn0kvm"]
+
+[ext_resource type="Script" path="res://scenes/actors/enemy/enemy.gd" id="1_iged3"]
+[ext_resource type="PackedScene" uid="uid://dg7wav023w23e" path="res://components/hitbox/hitbox.tscn" id="2_olyyu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1yq5"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7lqoe"]
+radius = 7.0
+height = 20.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+position = Vector2(-1207, -132)
+collision_layer = 5
+collision_mask = 7
+script = ExtResource("1_iged3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_d1yq5")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_olyyu")]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_7lqoe")
+debug_color = Color(0.847059, 0.337255, 0.443137, 0.419608)
