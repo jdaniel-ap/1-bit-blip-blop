@@ -8,7 +8,7 @@ func _process(_delta):
 	if animated_sprite2d == null:
 		return
 	
-	var player = owner.get_node('Player') as Node2D
+	var player = owner.get_node_or_null('Player') as Node2D
 	
 	if player == null:
 		return

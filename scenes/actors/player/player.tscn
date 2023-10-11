@@ -1,19 +1,29 @@
-[gd_scene load_steps=23 format=3 uid="uid://cm68e6uf3e4bk"]
+[gd_scene load_steps=33 format=3 uid="uid://cm68e6uf3e4bk"]
 
 [ext_resource type="Script" path="res://scenes/actors/player/player.gd" id="1_lqfqs"]
 [ext_resource type="Texture2D" uid="uid://baalx3bj464n8" path="res://scenes/actors/player/assets/hit/spr_enemy_01_hit (1).png" id="2_r0mw7"]
 [ext_resource type="Texture2D" uid="uid://c4wag4xarhbj6" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (1).png" id="2_ska7e"]
+[ext_resource type="Texture2D" uid="uid://crd4r7klns11d" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (1).png" id="2_v6flb"]
 [ext_resource type="Texture2D" uid="uid://0051uhwj4q6t" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (2).png" id="3_6i4hb"]
 [ext_resource type="Texture2D" uid="uid://bmjtoaqlvdvif" path="res://scenes/actors/player/assets/hit/spr_enemy_01_hit (2).png" id="3_qjhpj"]
+[ext_resource type="Texture2D" uid="uid://dejo41whkguj" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (2).png" id="3_xv8yl"]
 [ext_resource type="Texture2D" uid="uid://c051ws87j28ko" path="res://scenes/actors/player/assets/hit/spr_enemy_01_hit (3).png" id="4_5jnxs"]
+[ext_resource type="Texture2D" uid="uid://bcig35xvlhree" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (3).png" id="4_8xk87"]
 [ext_resource type="Texture2D" uid="uid://d1ehyt4qyyef0" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (3).png" id="4_aoofq"]
 [ext_resource type="Texture2D" uid="uid://h2eh501radt6" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (4).png" id="5_mqko7"]
 [ext_resource type="Texture2D" uid="uid://dsi7t4a37rd3r" path="res://scenes/actors/player/assets/hit/spr_enemy_01_hit (4).png" id="5_pnr8l"]
+[ext_resource type="Texture2D" uid="uid://dy1kbua3sktq7" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (4).png" id="5_rs5he"]
+[ext_resource type="Texture2D" uid="uid://gc67bmp1114w" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (5).png" id="6_dwvpb"]
 [ext_resource type="Texture2D" uid="uid://dqu0wpdpuxyw1" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (5).png" id="6_pd6e3"]
+[ext_resource type="Texture2D" uid="uid://bhnfdj3u3toem" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (6).png" id="7_4bv2h"]
 [ext_resource type="Texture2D" uid="uid://decpmxeb1ogf6" path="res://scenes/actors/player/assets/idle/spr_enemy_01_idle (6).png" id="7_hg5oe"]
+[ext_resource type="Texture2D" uid="uid://dn21eyiufvn0c" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (7).png" id="8_84tbh"]
 [ext_resource type="Texture2D" uid="uid://21rp51ktum1q" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (1).png" id="8_ip7h1"]
 [ext_resource type="Texture2D" uid="uid://6meoce4mrv6y" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (2).png" id="9_5s5yc"]
+[ext_resource type="Texture2D" uid="uid://nxxkkgmgrlcv" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (8).png" id="9_ystnh"]
+[ext_resource type="Texture2D" uid="uid://bb317dnsmh0yq" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (9).png" id="10_7kki2"]
 [ext_resource type="Texture2D" uid="uid://bb5jhhw17bfpv" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (3).png" id="10_wqw3t"]
+[ext_resource type="Texture2D" uid="uid://c7j6j6o7ypetn" path="res://scenes/actors/player/assets/death/spr_enemy_01_dead (10).png" id="11_1hjuo"]
 [ext_resource type="Texture2D" uid="uid://cmm0nkklwaibg" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (4).png" id="11_lsju1"]
 [ext_resource type="Texture2D" uid="uid://dx3osl7iv1uyg" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (5).png" id="12_7t81g"]
 [ext_resource type="Texture2D" uid="uid://h1rkeuk1aquv" path="res://scenes/actors/player/assets/jump/spr_enemy_01_jump (6).png" id="13_im478"]
@@ -22,6 +32,41 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hyel5"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v6flb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xv8yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8xk87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rs5he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dwvpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4bv2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_84tbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ystnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7kki2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1hjuo")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_r0mw7")
@@ -106,7 +151,7 @@ script = ExtResource("1_lqfqs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hyel5")
-animation = &"hit"
+animation = &"death"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -126,6 +171,18 @@ collision_mask = 4
 position = Vector2(0.5, 2.75)
 shape = SubResource("RectangleShape2D_rg8yr")
 debug_color = Color(0.976471, 0.133333, 0.196078, 0.419608)
+
+[node name="RayCast2DRight" type="RayCast2D" parent="."]
+position = Vector2(9, 3)
+target_position = Vector2(4, 2.08165e-12)
+collision_mask = 4
+hit_from_inside = true
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="."]
+position = Vector2(-8, 3)
+target_position = Vector2(-4, 2.08165e-12)
+collision_mask = 4
+hit_from_inside = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

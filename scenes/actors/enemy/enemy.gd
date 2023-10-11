@@ -18,7 +18,12 @@ func _physics_process(delta):
 	if animated_sprite == null:
 		return 
 	
-	var player = owner.get_node('Player') as Node2D;
+	var player = owner.get_node_or_null('Player') as Node2D;
+	
+	if player == null:
+		animated_sprite.play('idle')
+		return
+
 	var has_to_flip_sprite = true
 	var normalized_vector = (player.global_position - global_position).normalized()
 	velocity.x = normalized_vector.x * speed * delta
