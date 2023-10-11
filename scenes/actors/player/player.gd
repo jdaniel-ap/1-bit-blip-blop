@@ -17,13 +17,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if !is_taking_damage:
-			animated_sprite.play("jump")
-	else:
-		if !is_taking_damage:
-			if player_life > 0:
-				animated_sprite.play("idle")
-				
 	
 	if player_life != 0:
 		# Handle Jump.
@@ -44,6 +37,7 @@ func _physics_process(delta):
 			velocity = knockback_vector
 
 		move_and_slide()
+	_set_animation_state()
 
 
 func _on_hurtbox_body_entered(body: Node2D):
@@ -67,15 +61,19 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 	player_life = damage
 	is_taking_damage = true
 	
-	if player_life >= 1:
-		animated_sprite.play('hit')
-	else:
-		animated_sprite.play("death")
-		
-	
 	if knockback_force != Vector2.ZERO:
 		knockback_vector = knockback_force
 		var knockback_tween := create_tween()
 		knockback_tween.tween_property(self, 'knockback_vector', Vector2.ZERO, duration)
 		
-	
+
+func _set_animation_state():
+	var state = 'idle'
+	if not is_on_floor() && !is_taking_damage:
+		state = 'jump'
+	if is_taking_damage && player_life >= 1:
+		state = 'hit'
+	if is_taking_damage && player_life == 0:
+		state ='death'
+	if state != animated_sprite.animation:
+		animated_sprite.play(state)
