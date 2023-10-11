@@ -6,12 +6,21 @@ const JUMP_VELOCITY = -250.0
 
 var is_jumping = false
 var is_taking_damage = false
-var player_life = 2
+var player_xp = 0
+var player_lvl = 1
+var player_life = 2 * player_lvl
 var knockback_vector := Vector2.ZERO
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite = $AnimatedSprite2D
+
+func _process(_delta):
+	var label = owner.get_node_or_null('ExpUI/MarginContainer/Label')
+	if label == null:
+		return
+# revisar esta funcion, no podemos estar actualizando cada frame valores sin cambios
+	label.text = str('LVL:', player_lvl,'  ', 'XP:', player_xp)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -38,7 +47,6 @@ func _physics_process(delta):
 
 		move_and_slide()
 	_set_animation_state()
-
 
 func _on_hurtbox_body_entered(body: Node2D):
 	if body.is_in_group('enemies'):
@@ -77,3 +85,9 @@ func _set_animation_state():
 		state ='death'
 	if state != animated_sprite.animation:
 		animated_sprite.play(state)
+
+
+func _on_hurtbox_area_entered(area: Area2D):
+	if area.is_in_group('enemies'):
+		area.queue_free()
+		take_damage(Vector2(0,-200))

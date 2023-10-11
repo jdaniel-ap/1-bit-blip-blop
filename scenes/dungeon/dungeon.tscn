@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d4iyqgh8sfocm"]
+[gd_scene load_steps=40 format=3 uid="uid://d4iyqgh8sfocm"]
 
 [ext_resource type="Texture2D" uid="uid://if21dndrur14" path="res://scenes/dungeon/tileset.png" id="1_b7rd4"]
 [ext_resource type="Script" path="res://scenes/dungeon/dungeon.gd" id="1_x0kn8"]
@@ -7,24 +7,32 @@
 [ext_resource type="PackedScene" uid="uid://de1exivvn0kvm" path="res://scenes/actors/enemy/enemy.tscn" id="3_itou0"]
 [ext_resource type="Texture2D" uid="uid://b0x4hwjrg2i5" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (1).png" id="4_jglpd"]
 [ext_resource type="Texture2D" uid="uid://y2mcdisa5cfx" path="res://scenes/actors/enemy/assets/idle/spr_hero_idle (2).png" id="4_wvxwj"]
+[ext_resource type="Texture2D" uid="uid://jij2prcfrdx3" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (1).png" id="5_3o0o3"]
 [ext_resource type="Texture2D" uid="uid://rcygqglvqxet" path="res://scenes/actors/enemy/assets/idle/spr_hero_idle (3).png" id="5_447cu"]
 [ext_resource type="Texture2D" uid="uid://c72m3f3w76ofx" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (2).png" id="5_ljag0"]
 [ext_resource type="Texture2D" uid="uid://cxkm3lb767qfg" path="res://scenes/actors/enemy/assets/hit/spr_hero_hit (1).png" id="5_n00fv"]
+[ext_resource type="Texture2D" uid="uid://dhk35d8t6brnw" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (2).png" id="6_en6s3"]
 [ext_resource type="Texture2D" uid="uid://bd3rlkfuc8d6o" path="res://scenes/actors/enemy/assets/idle/spr_hero_idle (4).png" id="6_lmo2j"]
 [ext_resource type="Texture2D" uid="uid://dnp1qlmyxgiho" path="res://scenes/actors/enemy/assets/hit/spr_hero_hit (2).png" id="6_w61bb"]
 [ext_resource type="Texture2D" uid="uid://dhynefjrg307s" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (3).png" id="6_xk7rj"]
 [ext_resource type="Texture2D" uid="uid://ew4qisha7qpm" path="res://scenes/actors/enemy/assets/hit/spr_hero_hit (3).png" id="7_5aoos"]
 [ext_resource type="Texture2D" uid="uid://bwy7uxtms2mk8" path="res://scenes/actors/enemy/assets/idle/spr_hero_idle (5).png" id="7_0556m"]
 [ext_resource type="Texture2D" uid="uid://diayejx5llgxw" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (4).png" id="7_hexvi"]
+[ext_resource type="Texture2D" uid="uid://ca02nlkpyejhg" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (3).png" id="7_vvgrs"]
 [ext_resource type="Texture2D" uid="uid://cbxr2ao0twiv1" path="res://scenes/actors/enemy/assets/hit/spr_hero_hit (4).png" id="8_1vfuv"]
 [ext_resource type="Texture2D" uid="uid://ox6wpr55qtpo" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (5).png" id="8_m8tnm"]
 [ext_resource type="Texture2D" uid="uid://d4h3t3is4i3rb" path="res://scenes/actors/enemy/assets/idle/spr_hero_idle (6).png" id="8_u0b0l"]
+[ext_resource type="Texture2D" uid="uid://c46a0uwfsuuj6" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (4).png" id="8_vq2wk"]
+[ext_resource type="Texture2D" uid="uid://cu2jrgynnqfb8" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (5).png" id="9_1144m"]
 [ext_resource type="Texture2D" uid="uid://ritg7nchxtx" path="res://scenes/actors/skeleton/assets/idle/spr_enemy_02_idle (6).png" id="9_gmjt1"]
+[ext_resource type="Texture2D" uid="uid://bc8bnobqhsp36" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (6).png" id="10_c4s5w"]
 [ext_resource type="Texture2D" uid="uid://deler44bvofnj" path="res://scenes/actors/enemy/assets/move/spr_hero_move (1).png" id="10_p6pjk"]
+[ext_resource type="Texture2D" uid="uid://dr715iv7n6m8r" path="res://scenes/actors/enemy/assets/bowattack/spr_hero_bow (7).png" id="11_dh3yu"]
 [ext_resource type="Texture2D" uid="uid://dm4govt64p4f3" path="res://scenes/actors/enemy/assets/move/spr_hero_move (2).png" id="11_kn8ud"]
 [ext_resource type="Texture2D" uid="uid://duljv3kaqg5h5" path="res://scenes/actors/enemy/assets/move/spr_hero_move (3).png" id="12_3cv1f"]
 [ext_resource type="Texture2D" uid="uid://8hcghbes7qk5" path="res://scenes/actors/enemy/assets/move/spr_hero_move (4).png" id="13_w6xsi"]
 [ext_resource type="Script" path="res://scenes/dungeon/Dialog_npc.gd" id="15_kt8cv"]
+[ext_resource type="FontFile" uid="uid://cqlmk7icwho6k" path="res://components/ExpUI/assets/PressStart2P-Regular.ttf" id="26_g3e41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ber2g"]
 texture = ExtResource("1_b7rd4")
@@ -1091,6 +1099,32 @@ sources/1 = SubResource("TileSetAtlasSource_pca4d")
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_3o0o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_en6s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vvgrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vq2wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1144m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c4s5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dh3yu")
+}],
+"loop": false,
+"name": &"bowattack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("5_n00fv")
 }, {
 "duration": 1.0,
@@ -1210,8 +1244,10 @@ speed = 2500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
 sprite_frames = SubResource("SpriteFrames_17xdr")
-animation = &"hit"
+animation = &"bowattack"
 autoplay = "move"
+frame = 3
+frame_progress = 0.332141
 
 [node name="Timer_1" type="Timer" parent="."]
 wait_time = 10.0
@@ -1232,5 +1268,24 @@ autoplay = "idle"
 frame = 2
 frame_progress = 0.917702
 flip_h = true
+
+[node name="ExpUI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="ExpUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+
+[node name="Label" type="Label" parent="ExpUI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("26_g3e41")
+text = "test"
 
 [connection signal="animation_finished" from="Enemy/AnimatedSprite2D" to="Enemy" method="_on_animated_sprite_2d_animation_finished"]
